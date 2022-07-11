@@ -1,7 +1,6 @@
 import { InMemoryUsersRepository } from "../../repositories/in-memory/InMemoryUsersRepository";
 import { ShowUserProfileUseCase } from "./ShowUserProfileUseCase";
 import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
-import { User } from "../../entities/User";
 
 let inMemoryUsersRepository: InMemoryUsersRepository;
 let showUserProfileUseCase: ShowUserProfileUseCase;
@@ -17,8 +16,8 @@ describe("Show User Profile", () => {
   });
   it("should be able to show user profile ", async () => {
     const user = await createUserUseCase.execute({
-      name: "Vyctor",
-      email: "dev.vyctor@gmail.com",
+      name: "Eduardo",
+      email: "hunkjf2@gmail.com",
       password: "123123",
     });
 

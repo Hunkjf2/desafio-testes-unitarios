@@ -13,8 +13,8 @@ describe("Create User", () => {
 
   it("should be able to create an user", async () => {
     const user = await createUserUseCase.execute({
-      name: "Vyctor",
-      email: "dev.vyctor@gmail.com",
+      name: "Eduardo",
+      email: "hunkjf2@gmail.com",
       password: "123123",
     });
 
@@ -24,14 +24,14 @@ describe("Create User", () => {
   it("should not be able to register two users with same e-mail", () => {
     expect(async () => {
       await createUserUseCase.execute({
-        name: "Vyctor",
-        email: "dev.vyctor@gmail.com",
+        name: "Eduardo",
+        email: "hunkjf2@gmail.com",
         password: "123123",
       });
 
       await createUserUseCase.execute({
-        name: "Vyctor",
-        email: "dev.vyctor@gmail.com",
+        name: "Eduardo",
+        email: "hunkjf2@gmail.com",
         password: "123123",
       });
     }).rejects.toBeInstanceOf(AppError);
